@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:9.0
+    container_name: shopsphere-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: shopsphere
+      MYSQL_USER: shopsphere_user
+      MYSQL_PASSWORD: shopsphere_pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./database/shopsphere.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    command: --default-authentication-plugin=mysql_native_password
+
+  tomcat:
+    image: tomcat:11.0-jdk21
+    container_name: shopsphere-tomcat
+    restart: always
+    depends_on:
+      - mysql
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./web/target/shopsphere.war:/usr/local/tomcat/webapps/shopsphere.war:ro
+
+volumes:
+  mysql_data:

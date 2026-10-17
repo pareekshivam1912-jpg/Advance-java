@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product id="101">
+        <name>Apple iPhone 16 Pro Max</name>
+        <category>Mobiles</category>
+        <price>144900.00</price>
+        <stock>18</stock>
+        <rating>4.9</rating>
+    </product>
+    <product id="102">
+        <name>Samsung Galaxy S24 Ultra</name>
+        <category>Mobiles</category>
+        <price>129999.00</price>
+        <stock>22</stock>
+        <rating>4.8</rating>
+    </product>
+    <product id="103">
+        <name>MacBook Pro 16-inch M3 Max</name>
+        <category>Laptops</category>
+        <price>349900.00</price>
+        <stock>7</stock>
+        <rating>4.9</rating>
+    </product>
+    <product id="104">
+        <name>Sony WH-1000XM5 Noise Cancelling</name>
+        <category>Electronics</category>
+        <price>29990.00</price>
+        <stock>45</stock>
+        <rating>4.7</rating>
+    </product>
+    <product id="105">
+        <name>Dell XPS 15 OLED</name>
+        <category>Laptops</category>
+        <price>219000.00</price>
+        <stock>0</stock>
+        <rating>4.5</rating>
+    </product>
+</products>

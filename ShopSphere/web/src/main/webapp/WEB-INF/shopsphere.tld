@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="https://jakarta.ee/xml/ns/jakartaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                            https://jakarta.ee/xml/ns/jakartaee/web-jsptaglibrary_3_0.xsd"
+        version="3.0">
+
+    <description>ShopSphere Custom Tag Extensions Library</description>
+    <display-name>ShopSphere Tags</display-name>
+    <tlib-version>1.0</tlib-version>
+    <short-name>shop</short-name>
+    <uri>http://com.shopsphere/tags</uri>
+
+    <!-- Custom PriceTag SimpleTag Handler -->
+    <tag>
+        <description>Formats and outputs formatted currency price with optional strikethrough</description>
+        <name>price</name>
+        <tag-class>com.shopsphere.tag.PriceTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>amount</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.math.BigDecimal</type>
+        </attribute>
+        <attribute>
+            <name>currency</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>strikethrough</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>boolean</type>
+        </attribute>
+    </tag>
+
+</taglib>

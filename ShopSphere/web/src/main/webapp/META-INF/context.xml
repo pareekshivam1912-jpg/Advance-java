@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <!-- RTU Advanced Java Syllabus: JNDI (Java Naming and Directory Interface) Resource Declaration -->
+    <!-- Tomcat Connection Pool DataSource accessible under java:comp/env/jdbc/shopsphereDS -->
+    <Resource name="jdbc/shopsphereDS"
+              auth="Container"
+              type="javax.sql.DataSource"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/shopsphere?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC&amp;characterEncoding=UTF-8"
+              username="root"
+              password="Shivam@1912#"
+              maxTotal="25"
+              maxIdle="10"
+              minIdle="5"
+              maxWaitMillis="5000"
+              validationQuery="SELECT 1"
+              testOnBorrow="true"/>
+
+    <!-- JNDI Environment Entries for Demonstration -->
+    <Environment name="academicEnvironment"
+                 type="java.lang.String"
+                 value="RTU Kota Advanced Java Capstone"
+                 override="false"/>
+
+    <Environment name="maxUploadSizeMB"
+                 type="java.lang.Integer"
+                 value="15"
+                 override="false"/>
+</Context>

@@ -1,0 +1,151 @@
+/* ShopSphere Modern E-Commerce Stylesheet */
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --secondary-color: #f59e0b;
+    --dark-color: #0f172a;
+    --light-bg: #f8fafc;
+    --card-border: #e2e8f0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--light-bg);
+    color: #334155;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1 0 auto;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+/* Product Cards */
+.product-card {
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.product-img-wrapper {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-img-wrapper img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ef4444;
+    color: white;
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.price-strike {
+    text-decoration: line-through;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-left: 6px;
+}
+
+.star-rating {
+    color: #f59e0b;
+    font-size: 0.9rem;
+}
+
+/* Order timeline */
+.timeline-steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.timeline-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.timeline-step:not(:last-child):after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #cbd5e1;
+    top: 15px;
+    left: 50%;
+    z-index: 1;
+}
+
+.timeline-step.completed:not(:last-child):after {
+    background-color: #22c55e;
+}
+
+.timeline-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #e2e8f0;
+    color: #64748b;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    font-weight: bold;
+}
+
+.timeline-step.completed .timeline-icon {
+    background-color: #22c55e;
+    color: #ffffff;
+}
+
+.timeline-step.active .timeline-icon {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: #cbd5e1;
+    margin-top: auto;
+}
