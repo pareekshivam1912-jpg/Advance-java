@@ -1,0 +1,758 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office'
+      xmlns:w='urn:schemas-microsoft-com:office:word'
+      xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+<meta charset="utf-8">
+<title>ShopSphere - Beginner's Complete Viva & Implementation Master Guide</title>
+<!--[if gte mso 9]>
+<xml>
+<w:WordDocument>
+<w:View>Print</w:View>
+<w:Zoom>100</w:Zoom>
+<w:DoNotOptimizeForBrowser/>
+</w:WordDocument>
+</xml>
+<![endif]-->
+<style>
+    body {
+        font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
+        font-size: 11pt;
+        line-height: 1.5;
+        color: #1e293b;
+        margin: 1in;
+    }
+    h1 {
+        color: #0f172a;
+        font-size: 24pt;
+        font-weight: bold;
+        border-bottom: 3px solid #2563eb;
+        padding-bottom: 6px;
+        margin-top: 24pt;
+        margin-bottom: 12pt;
+    }
+    h2 {
+        color: #1e3a8a;
+        font-size: 18pt;
+        font-weight: bold;
+        border-bottom: 1.5px solid #93c5fd;
+        padding-bottom: 4px;
+        margin-top: 18pt;
+        margin-bottom: 8pt;
+    }
+    h3 {
+        color: #1d4ed8;
+        font-size: 14pt;
+        font-weight: bold;
+        margin-top: 14pt;
+        margin-bottom: 6pt;
+    }
+    h4 {
+        color: #0369a1;
+        font-size: 12pt;
+        font-weight: bold;
+        margin-top: 10pt;
+        margin-bottom: 4pt;
+    }
+    p {
+        margin-top: 0;
+        margin-bottom: 8pt;
+        text-align: justify;
+    }
+    .analogy-box {
+        background-color: #f0fdf4;
+        border-left: 5px solid #16a34a;
+        padding: 10pt;
+        margin: 10pt 0;
+        border-radius: 4px;
+    }
+    .warning-box {
+        background-color: #fef2f2;
+        border-left: 5px solid #dc2626;
+        padding: 10pt;
+        margin: 10pt 0;
+        border-radius: 4px;
+    }
+    .viva-box {
+        background-color: #eff6ff;
+        border-left: 5px solid #2563eb;
+        padding: 10pt;
+        margin: 10pt 0;
+        border-radius: 4px;
+    }
+    .script-box {
+        background-color: #faf5ff;
+        border-left: 5px solid #9333ea;
+        padding: 10pt;
+        margin: 10pt 0;
+        border-radius: 4px;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 12pt 0;
+        font-size: 10pt;
+    }
+    th {
+        background-color: #1e293b;
+        color: #ffffff;
+        font-weight: bold;
+        text-align: left;
+        padding: 8pt;
+        border: 1px solid #334155;
+    }
+    td {
+        padding: 7pt;
+        border: 1px solid #cbd5e1;
+        vertical-align: top;
+    }
+    tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
+    code {
+        font-family: 'Consolas', 'Courier New', monospace;
+        background-color: #f1f5f9;
+        color: #0f172a;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-size: 9.5pt;
+    }
+    pre {
+        font-family: 'Consolas', 'Courier New', monospace;
+        background-color: #0f172a;
+        color: #f8fafc;
+        padding: 10pt;
+        border-radius: 5px;
+        font-size: 9pt;
+        line-height: 1.4;
+        overflow-x: auto;
+    }
+    .page-break { page-break-after: always; }
+</style>
+</head>
+<body>
+
+<!-- TITLE PAGE -->
+<div style="text-align: center; margin-top: 40pt; margin-bottom: 40pt;">
+    <h1 style="border-bottom: none; font-size: 28pt; color: #1e3a8a; margin-bottom: 5pt;">ShopSphere</h1>
+    <h2 style="border-bottom: none; font-size: 16pt; color: #475569; font-weight: normal; margin-top: 0;">
+        Enterprise Java E-Commerce Management System & RTU Capstone Project
+    </h2>
+    <div style="height: 3px; width: 120px; background-color: #2563eb; margin: 20pt auto;"></div>
+    <h3 style="font-size: 15pt; color: #0f172a; margin-top: 20pt;">
+        THE COMPLETE BEGINNER-FRIENDLY VIVA PREPARATION & IMPLEMENTATION GUIDE
+    </h3>
+    <p style="font-size: 12pt; color: #64748b; margin-top: 15pt;">
+        <em>Written specifically for students with zero prior knowledge of databases, Servlets, JSP, JDBC, Swing, or RMI</em>
+    </p>
+    <div style="margin-top: 35pt; font-size: 10.5pt; color: #334155;">
+        <p><strong>Course:</strong> RTU B.Tech CSE — 6CS4-04 Advanced Java Laboratory</p>
+        <p><strong>Technology Stack:</strong> Java 21 LTS, Apache Tomcat 11 (Jakarta EE 10), MySQL 9.7, Java Swing, TCP Sockets, Java RMI</p>
+        <p><strong>Project Status:</strong> 100% Fully Implemented, Tested, Deployed & Verified</p>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- TABLE OF CONTENTS -->
+<h2>Table of Contents</h2>
+<ol style="line-height: 1.8; font-size: 11pt;">
+    <li><strong>Chapter 1: The Project in Simple Words (No Jargon)</strong> — What is ShopSphere, who uses it, and what problem does it solve?</li>
+    <li><strong>Chapter 2: The Core Concepts Explained with Real-Life Analogies</strong> — What are Databases, Servlets, JSPs, Sessions, Filters, Sockets, Swing, and RMI?</li>
+    <li><strong>Chapter 3: What Was Implemented (Feature-by-Feature Tour)</strong> — Everything built into the website, desktop app, and network servers.</li>
+    <li><strong>Chapter 4: How It Works Under the Hood (Step-by-Step Code Traces)</strong> — What happens behind the scenes when a user logs in or buys a product.</li>
+    <li><strong>Chapter 5: Technical Terms & Buzzwords Glossary</strong> — 30 terms the external examiner might ask about, defined simply.</li>
+    <li><strong>Chapter 6: Top 25 Viva Questions & Exactly What to Say</strong> — Complete question-and-answer cheat sheet for high marks.</li>
+    <li><strong>Chapter 7: The 10-Minute Live Viva Demo Script</strong> — Exactly what buttons to click and what sentences to say during the exam.</li>
+</ol>
+
+<hr style="border: 0; border-top: 1px solid #cbd5e1; margin: 20pt 0;">
+
+<!-- CHAPTER 1 -->
+<h1>Chapter 1: The Project in Simple Words (No Jargon)</h1>
+
+<p>
+Imagine you are building a complete online store like Amazon or Flipkart, but built entirely from scratch using pure Java. That is <strong>ShopSphere</strong>.
+</p>
+
+<h3>1.1 What is ShopSphere?</h3>
+<p>
+ShopSphere is an <strong>Enterprise E-Commerce Management System</strong>. It allows everyday customers to browse products on a website, add them to a shopping cart, apply discount coupon codes, and place orders. At the same time, it gives the business owner (the Administrator) tools to manage inventory, change order statuses, add new products, and track warehouse stock.
+</p>
+
+<h3>1.2 The Three Different Interfaces (Clients) Built into ShopSphere</h3>
+<p>
+Most student projects only have a basic website. ShopSphere is unique and impressive because it includes <strong>three separate applications</strong> that all talk to the same database:
+</p>
+<ol>
+    <li>
+        <strong>The Web Storefront (Website):</strong>
+        Opened in any web browser (Google Chrome, Edge, Safari). Used by customers to view laptops, phones, headphones, add items to cart, and checkout. Also used by admins to manage the store online.
+    </li>
+    <li>
+        <strong>The Desktop Admin Application (Java Swing):</strong>
+        A real desktop window with buttons, menus, and tables (like an MS Excel or Tally app) that opens on your computer. Used by warehouse managers to quickly restock products and update order statuses with 1 click without needing a web browser.
+    </li>
+    <li>
+        <strong>The Distributed Network Systems (TCP Sockets & RMI):</strong>
+        Two background server systems. One acts like a walkie-talkie for barcode scanners in a warehouse (TCP Sockets on port 5055). The other allows other computers to execute inventory methods remotely (Java RMI on port 1099).
+    </li>
+</ol>
+
+<div class="analogy-box">
+    <strong>💡 The Restaurant Analogy:</strong><br>
+    Think of ShopSphere like a modern restaurant:
+    <ul>
+        <li><strong>The Customers</strong> sit in the dining hall and read the printed menu (The Website / JSP).</li>
+        <li><strong>The Waiters</strong> take customer orders and carry them to the kitchen (The Servlets / Controllers).</li>
+        <li><strong>The Kitchen Chef</strong> checks recipes, cooks food, and updates ingredients (Business Services).</li>
+        <li><strong>The Stockroom / Pantry</strong> stores all food ingredients in organized shelves (The MySQL Database).</li>
+        <li><strong>The Manager's Office Computer</strong> has a desktop application showing how many veggies are left (Java Swing Desktop App).</li>
+        <li><strong>The Delivery Truck Walkie-Talkie</strong> tells the kitchen when fresh stock arrives (TCP Sockets & RMI).</li>
+    </ul>
+</div>
+
+<div class="page-break"></div>
+
+<!-- CHAPTER 2 -->
+<h1>Chapter 2: Core Concepts Explained with Real-Life Analogies</h1>
+
+<p>
+If the examiner asks you "What is a Servlet?" or "What is JDBC?", do not panic! Here are the core concepts explained in everyday language:
+</p>
+
+<h3>2.1 What is a Database (MySQL)?</h3>
+<div class="analogy-box">
+    <strong>Analogy:</strong> Think of MySQL like a collection of organized <strong>Microsoft Excel spreadsheets</strong> stored on your computer.
+</div>
+<p>
+Instead of saving user accounts and products in text files (which would get messy and slow), we use <strong>MySQL</strong>. Each "sheet" in our database is called a <strong>Table</strong>. ShopSphere has 12 tables:
+<code>users</code>, <code>products</code>, <code>categories</code>, <code>cart</code>, <code>wishlist</code>, <code>orders</code>, <code>order_items</code>, <code>payments</code>, <code>coupons</code>, <code>addresses</code>, <code>reviews</code>, and <code>coupon_usage</code>.
+</p>
+
+<h3>2.2 What is JDBC (Java Database Connectivity)?</h3>
+<div class="analogy-box">
+    <strong>Analogy:</strong> MySQL speaks SQL language (like French), and Java speaks Java (like English). <strong>JDBC is the translator and the telephone cable</strong> connecting them.
+</div>
+<p>
+JDBC allows Java code to send SQL commands (like <code>SELECT * FROM products</code>) to MySQL and receive the rows back as Java objects. In ShopSphere, we use <strong>Plain JDBC</strong> with <code>PreparedStatement</code> (we do NOT use frameworks like Hibernate or Spring Boot, because RTU syllabus tests your core Java knowledge).
+</p>
+
+<h3>2.3 What is a Servlet?</h3>
+<div class="analogy-box">
+    <strong>Analogy:</strong> A Servlet is the <strong>waiter in a restaurant</strong>.
+</div>
+<p>
+When a user clicks "Login" on their browser, the browser sends an HTTP request over the internet. The <strong>Servlet</strong> catches that request, reads what email and password the user typed, asks the Java service to verify it against the database, and then decides what web page the user should see next.
+</p>
+
+<h3>2.4 What is a JSP (JavaServer Pages)?</h3>
+<div class="analogy-box">
+    <strong>Analogy:</strong> JSP is the <strong>printed menu card</strong> with blanks that get filled in dynamically.
+</div>
+<p>
+HTML is static—it cannot change by itself. <strong>JSP</strong> is HTML mixed with special tags. When a customer opens the product page, the JSP dynamically prints the product's actual name, picture, and price taken from the database.
+</p>
+
+<h3>2.5 What is a Session and a Cookie?</h3>
+<div class="analogy-box">
+    <strong>Analogy:</strong>
+    <ul>
+        <li><strong>A Cookie</strong> is like a <strong>hand-stamp</strong> you get at an amusement park. It is stored on your own hand (your browser).</li>
+        <li><strong>An HttpSession</strong> is like a <strong>locker inside the park</strong>. The park keeps your bags safely in the locker (server memory), and gives you a locker number (Session ID) stamped on your ticket.</li>
+    </ul>
+</div>
+<p>
+HTTP is "stateless"—it forgets who you are the second a page loads. <strong>Sessions</strong> allow the server to remember: <em>"Aha! This user logged in 5 minutes ago as admin@shopsphere.com, so keep them logged in while they click around!"</em>
+</p>
+
+<h3>2.6 What is a Filter?</h3>
+<div class="analogy-box">
+    <strong>Analogy:</strong> A Filter is a <strong>security guard standing at the front door</strong> of the building.
+</div>
+<p>
+Before any request is allowed to reach a Servlet, it must pass through our Filters:
+</p>
+<ul>
+    <li><code>EncodingFilter</code>: Ensures all characters are UTF-8 (so Hindi and special symbols work).</li>
+    <li><code>AuthenticationFilter</code>: Checks: <em>"Are you logged in? If not, stop right there! Go to the login page first."</em></li>
+    <li><code>AdminFilter</code>: Checks: <em>"Are you an Admin? If you are just a regular customer, you are not allowed in the admin area!"</em></li>
+</ul>
+
+<h3>2.7 What is Java Swing?</h3>
+<div class="analogy-box">
+    <strong>Analogy:</strong> Swing is Java's tool to draw <strong>real Windows desktop applications</strong> (windows, buttons, checkboxes, tables).
+</div>
+<p>
+Instead of a website in a browser, <code>shopsphere-swing-admin</code> is a standalone program that opens its own desktop window with menus (File, Look & Feel, Help) and tabs to manage products, categories, customers, and orders.
+</p>
+
+<h3>2.8 What is a TCP Socket?</h3>
+<div class="analogy-box">
+    <strong>Analogy:</strong> A Socket is like a <strong>direct phone call or walkie-talkie</strong> between two computers.
+</div>
+<p>
+In <code>shopsphere-network</code>, computer A connects directly to computer B on port 5055. Computer A sends a message: <code>CHECK_STOCK:1</code>, and Computer B immediately replies: <code>SUCCESS:STOCK:25</code>.
+</p>
+
+<h3>2.9 What is Java RMI (Remote Method Invocation)?</h3>
+<div class="analogy-box">
+    <strong>Analogy:</strong> RMI is like a <strong>magical remote control</strong> that presses a button on a machine in another room.
+</div>
+<p>
+Normally, in Java, you can only call methods on objects in your own program (like <code>service.getStock(1)</code>). With <strong>RMI</strong>, your Java program can call a method that actually runs inside a completely different Java program running on another machine across the network, and get the result back transparently!
+</p>
+
+<div class="page-break"></div>
+
+<!-- CHAPTER 3 -->
+<h1>Chapter 3: What Was Implemented (Feature-by-Feature Tour)</h1>
+
+<p>
+Here is the exact list of all features implemented in ShopSphere. You can speak about any of these in your viva:
+</p>
+
+<table>
+    <tr>
+        <th style="width: 25%;">Feature Name</th>
+        <th style="width: 35%;">What It Does in the Application</th>
+        <th style="width: 40%;">How We Implemented It in Code</th>
+    </tr>
+    <tr>
+        <td><strong>User Registration & Login</strong></td>
+        <td>Allows customers to sign up with name, email, phone, and password. Allows admins and customers to log in securely.</td>
+        <td>
+            <code>LoginServlet.java</code> & <code>RegisterServlet.java</code>.<br>
+            Passwords are encrypted using <strong>PBKDF2 with HMAC-SHA256</strong> (salted hash with 65,536 iterations). We never store raw passwords.
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Session Fixation Defense</strong></td>
+        <td>Prevents hackers from stealing a user's login session.</td>
+        <td>
+            In <code>LoginServlet</code>, right after credentials match, we call <code>request.changeSessionId()</code>. This destroys the old guest session ID and issues a brand-new secure ID.
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Product Catalog & Search</strong></td>
+        <td>Displays items with images, prices, stock badges, rating stars, keyword search bar, and category filters.</td>
+        <td>
+            <code>ProductServlet.java</code> handles <code>/products</code>.<br>
+            Executes SQL <code>SELECT ... WHERE category_id=? AND price BETWEEN ? AND ?</code> via <code>PreparedStatement</code>.
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Shopping Cart & Wishlist</strong></td>
+        <td>Customers can add items to cart, change quantities (+/-), save items to wishlist, and view live totals.</td>
+        <td>
+            <code>CartServlet.java</code> and <code>WishlistServlet.java</code>.<br>
+            All totals (Subtotal, GST 18%, Shipping) are computed <strong>server-side</strong> in Java so clients cannot tamper with prices.
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Discount Coupons Engine</strong></td>
+        <td>Customers enter codes like <code>WELCOME10</code> or <code>FESTIVE20</code> to get percentage or flat discounts.</td>
+        <td>
+            <code>CouponService.java</code> validates expiry date, minimum order value, and maximum usage count before subtracting discount.
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Atomic Checkout (ACID)</strong></td>
+        <td>Places the order, creates order line items, deducts stock, records payment, and empties the cart.</td>
+        <td>
+            <code>CheckoutService.java</code>.<br>
+            Uses <code>conn.setAutoCommit(false)</code>, locks stock with <code>SELECT ... FOR UPDATE</code>, and calls <code>conn.commit()</code>. If anything fails, it calls <code>conn.rollback()</code>!
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Web Admin Dashboard</strong></td>
+        <td>Admins view revenue charts, total orders count, product CRUD, and update order statuses (PENDING &rarr; SHIPPED).</td>
+        <td>
+            <code>AdminDashboardServlet.java</code> and admin JSPs.<br>
+            Guarded by <code>AdminFilter</code> so standard customers get HTTP 403 Access Denied.
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Java Swing Desktop App</strong></td>
+        <td>A standalone desktop window for warehouse managers with tables, forms, and look-and-feel switcher.</td>
+        <td>
+            <code>SwingAdminApp.java</code> in <code>swing-admin</code> module.<br>
+            Follows MVC pattern. Uses <code>SwingWorker</code> to run database queries on background threads so the GUI never freezes.
+        </td>
+    </tr>
+    <tr>
+        <td><strong>TCP Socket Inventory Server</strong></td>
+        <td>Listens on port 5055 for barcode terminals to check or update stock via network commands.</td>
+        <td>
+            <code>InventoryServer.java</code> uses <code>java.net.ServerSocket</code> and a <code>FixedThreadPool(10)</code> to handle multiple client connections concurrently.
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Java Remote Method Invocation</strong></td>
+        <td>Distributed service allowing remote JVMs to check stock and inventory over port 1099.</td>
+        <td>
+            <code>InventoryService.java</code> (Remote interface), <code>InventoryServiceImpl.java</code> (extends <code>UnicastRemoteObject</code>), and <code>RmiServer.java</code> (RMI Registry).
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Internationalization (i18n)</strong></td>
+        <td>Switch entire website language between English and Hindi (हिंदी) with Indian Rupee (₹) formatting.</td>
+        <td>
+            <code>messages_en.properties</code> & <code>messages_hi.properties</code>.<br>
+            <code>LanguageServlet.java</code> switches locale via <code>fmt:setLocale</code> and renders text via <code>fmt:message</code>.
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Syllabus Academic Demo Hub</strong></td>
+        <td>A live page demonstrating all university syllabus topics (EL, JSTL XML, JSTL SQL, JNDI, JSP elements).</td>
+        <td>
+            <code>/demo/index.jsp</code> linking 7 interactive demonstration pages.
+        </td>
+    </tr>
+</table>
+
+<div class="page-break"></div>
+
+<!-- CHAPTER 4 -->
+<h1>Chapter 4: How It Works Under the Hood (Step-by-Step Code Traces)</h1>
+
+<p>
+Examiners love asking: <em>"Walk me through what happens when a user clicks a button."</em> Here are the two most important flows explained step-by-step:
+</p>
+
+<h3>4.1 Trace 1: What happens when a user logs in?</h3>
+<ol>
+    <li><strong>User action:</strong> The user types <code>admin@shopsphere.com</code> and password <code>Admin@123</code> into <code>login.jsp</code> and clicks <strong>"Sign In"</strong>.</li>
+    <li><strong>Browser sends HTTP POST:</strong> The browser sends an HTTP POST request to the URL <code>/shopsphere/login</code>.</li>
+    <li><strong>Filters intercept:</strong>
+        <ul>
+            <li><code>EncodingFilter</code> intercepts the request and sets character encoding to <code>UTF-8</code>.</li>
+            <li><code>SecurityFilter</code> injects browser security headers (XSS and Clickjacking protection).</li>
+        </ul>
+    </li>
+    <li><strong>Servlet receives request:</strong> Tomcat routes the request to <code>LoginServlet.doPost()</code>.</li>
+    <li><strong>Service call:</strong> <code>LoginServlet</code> calls <code>UserService.authenticate(email, password)</code>.</li>
+    <li><strong>Database lookup:</strong> <code>UserDAOImpl</code> executes a safe parameterized query:
+        <pre>SELECT * FROM users WHERE email = ?</pre>
+        It gets the user record containing the stored salt and password hash.
+    </li>
+    <li><strong>Password verification:</strong> <code>PasswordUtil</code> hashes the entered password with the user's stored salt using <strong>PBKDF2WithHmacSHA256</strong>. If the generated hash matches the stored hash, authentication succeeds!</li>
+    <li><strong>Session Fixation Defense:</strong> <code>LoginServlet</code> calls <code>request.changeSessionId()</code> to rotate the session ID safely.</li>
+    <li><strong>Store in Session:</strong> The servlet saves the user object in the session:
+        <pre>session.setAttribute("currentUser", user);</pre>
+    </li>
+    <li><strong>Redirect:</strong> The servlet sends an HTTP 302 Redirect to <code>/shopsphere/home</code> (or <code>/admin/dashboard</code>). The browser displays the logged-in homepage!</li>
+</ol>
+
+<hr style="border: 0; border-top: 1px dashed #cbd5e1; margin: 15pt 0;">
+
+<h3>4.2 Trace 2: What happens when a customer places an order (Atomic Checkout)?</h3>
+<div class="warning-box">
+    <strong>⭐ Must Know For Viva:</strong> This demonstrates <strong>ACID Transactions</strong>, which is a favorite topic of university examiners!
+</div>
+<ol>
+    <li><strong>Customer clicks "Place Order"</strong> on <code>checkout.jsp</code>.</li>
+    <li><code>CheckoutServlet.doPost()</code> catches the request and calls <code>CheckoutService.processCheckout()</code>.</li>
+    <li><strong>Start Transaction:</strong> <code>CheckoutService</code> gets a database connection and turns off auto-commit:
+        <pre>conn.setAutoCommit(false); // Begin ACID Transaction</pre>
+    </li>
+    <li><strong>Step A (Lock & Check Stock):</strong> For every item in the cart, it runs:
+        <pre>SELECT stock_quantity FROM products WHERE id = ? FOR UPDATE;</pre>
+        If the customer wants 2 laptops, but only 1 is left in stock, it immediately throws an error and cancels everything.
+    </li>
+    <li><strong>Step B (Deduct Stock):</strong> It subtracts the purchased quantity from <code>products.stock_quantity</code>.</li>
+    <li><strong>Step C (Calculate Math Server-Side):</strong> It calculates Subtotal, applies coupon discount (if any), calculates 18% GST, adds shipping fee, and gets the Net Total.</li>
+    <li><strong>Step D (Insert Order Header):</strong> It inserts a new row into the <code>orders</code> table and gets the generated Order ID.</li>
+    <li><strong>Step E (Insert Order Items):</strong> For each cart item, it inserts a row into <code>order_items</code> (freezing the historical purchase price).</li>
+    <li><strong>Step F (Insert Payment & Clear Cart):</strong> It records the payment row and deletes the user's items from the <code>cart</code> table.</li>
+    <li><strong>Commit Transaction:</strong>
+        <pre>conn.commit(); // Everything succeeded! Save permanently.</pre>
+        <em>If any error occurred at ANY step above, the <code>catch</code> block executes:</em>
+        <pre>conn.rollback(); // Undo EVERYTHING. Database stays clean and safe!</pre>
+    </li>
+</ol>
+
+<div class="page-break"></div>
+
+<!-- CHAPTER 5 -->
+<h1>Chapter 5: Technical Terms & Buzzwords Glossary</h1>
+
+<p>
+Memorize these short, crisp definitions. When the examiner uses these words, you will know exactly what they mean:
+</p>
+
+<table>
+    <tr>
+        <th style="width: 25%;">Term</th>
+        <th style="width: 45%;">Simple Definition</th>
+        <th style="width: 30%;">Where in ShopSphere?</th>
+    </tr>
+    <tr>
+        <td><strong>PreparedStatement</strong></td>
+        <td>A pre-compiled SQL query using <code>?</code> placeholders. Prevents SQL injection attacks and executes faster.</td>
+        <td>Used in all 11 DAOs (<code>ProductDAOImpl</code>, <code>UserDAOImpl</code>, etc.).</td>
+    </tr>
+    <tr>
+        <td><strong>SQL Injection (SQLi)</strong></td>
+        <td>A cyberattack where a hacker types SQL commands into input boxes (like <code>' OR 1=1 --</code>) to steal data.</td>
+        <td>We defeated SQLi 100% by using <code>PreparedStatement</code> everywhere.</td>
+    </tr>
+    <tr>
+        <td><strong>Cross-Site Scripting (XSS)</strong></td>
+        <td>An attack where malicious JavaScript is injected into web pages.</td>
+        <td>Defeated by escaping all text using JSTL <code>&lt;c:out&gt;</code> and SecurityFilter headers.</td>
+    </tr>
+    <tr>
+        <td><strong>N-Tier Architecture</strong></td>
+        <td>Separating an application into distinct layers (Presentation &rarr; Controller &rarr; Service &rarr; DAO &rarr; Database) so each layer only does its own job.</td>
+        <td>Our whole project structure (Web/Swing &rarr; Servlets &rarr; Services &rarr; DAOs &rarr; MySQL).</td>
+    </tr>
+    <tr>
+        <td><strong>MVC (Model-View-Controller)</strong></td>
+        <td>
+            <strong>Model:</strong> Data (Product, User).<br>
+            <strong>View:</strong> Screen (JSP, Swing Panel).<br>
+            <strong>Controller:</strong> Logic coordinator (Servlet, Action Listener).
+        </td>
+        <td>Implemented in both our Web application and our Swing Desktop Admin app.</td>
+    </tr>
+    <tr>
+        <td><strong>Event Dispatch Thread (EDT)</strong></td>
+        <td>A single special background thread in Java Swing responsible for drawing windows and handling mouse clicks.</td>
+        <td>In <code>SwingAdminApp.java</code>, all GUI code is launched via <code>SwingUtilities.invokeLater()</code>.</td>
+    </tr>
+    <tr>
+        <td><strong>SwingWorker</strong></td>
+        <td>A background worker thread in Swing. Used to run slow tasks (like database queries) off the EDT so the desktop window doesn't freeze or lag.</td>
+        <td>Used in <code>ProductController</code>, <code>OrderController</code> in the Swing admin module.</td>
+    </tr>
+    <tr>
+        <td><strong>Pluggable Look & Feel (PLAF)</strong></td>
+        <td>The ability of a Java Swing app to switch its visual theme (System, Nimbus, Metal) at runtime without restarting.</td>
+        <td>In <code>AdminDashboard.java</code> under the "Look & Feel" menu bar.</td>
+    </tr>
+    <tr>
+        <td><strong>RMI Registry</strong></td>
+        <td>A naming directory service running on port 1099 that maps service names (like <code>"InventoryService"</code>) to remote objects.</td>
+        <td>Created by <code>RmiServer.java</code> using <code>LocateRegistry.createRegistry(1099)</code>.</td>
+    </tr>
+    <tr>
+        <td><strong>Stub & Skeleton</strong></td>
+        <td>
+            <strong>Stub:</strong> Client-side proxy object.<br>
+            <strong>Skeleton:</strong> Server-side dispatcher object that receives the remote call and runs it.
+        </td>
+        <td>Core mechanism of our <code>shopsphere-rmi</code> module.</td>
+    </tr>
+    <tr>
+        <td><strong>Serialization</strong></td>
+        <td>Converting an in-memory Java object into a sequence of bytes so it can be saved to disk or sent over a network.</td>
+        <td>Domain classes implement <code>java.io.Serializable</code>. Demonstrated in <code>SerializationDemo.java</code>.</td>
+    </tr>
+    <tr>
+        <td><strong>transient keyword</strong></td>
+        <td>Tells Java: <em>"Do NOT serialize this field when saving/transmitting this object!"</em> Used for sensitive data like passwords.</td>
+        <td>Used in <code>SerializationDemo.java</code> to hide user passwords during network transmission.</td>
+    </tr>
+    <tr>
+        <td><strong>JNDI (Java Naming & Directory Interface)</strong></td>
+        <td>A standard API for looking up resources by name (like looking up a phone number in a phone book).</td>
+        <td>Used in <code>demo/jndi-demo.jsp</code> to look up Tomcat's database pool <code>jdbc/shopsphereDS</code>.</td>
+    </tr>
+    <tr>
+        <td><strong>i18n (Internationalization)</strong></td>
+        <td>Designing software so it can be adapted to various languages and regions without code changes.</td>
+        <td>Demonstrated by our English / Hindi switcher using <code>ResourceBundle</code> and JSTL <code>fmt:message</code>.</td>
+    </tr>
+</table>
+
+<div class="page-break"></div>
+
+<!-- CHAPTER 6 -->
+<h1>Chapter 6: Top 25 Viva Questions & Exactly What to Say</h1>
+
+<p>
+Read these 25 questions and practice speaking the answers out loud. These cover 95% of questions external examiners ask:
+</p>
+
+<div class="viva-box">
+    <strong>Q1: What is the difference between <code>GET</code> and <code>POST</code> HTTP methods?</strong><br>
+    <strong>What to say:</strong><br>
+    <em>"Sir, GET is used to retrieve data from the server. The parameters are visible in the URL bar, and it has a length limit. POST is used to submit or save sensitive data (like passwords or payments). The data is sent inside the HTTP request body, so it is not visible in the URL bar and has no size limit."</em>
+</div>
+
+<div class="viva-box">
+    <strong>Q2: What is the lifecycle of a Servlet?</strong><br>
+    <strong>What to say:</strong><br>
+    <em>"A Servlet has three main lifecycle stages managed by the web container (Tomcat):<br>
+    1. <strong>init():</strong> Called once when the servlet is first created to initialize resources.<br>
+    2. <strong>service():</strong> Called on every request. It dispatches to doGet() or doPost() to handle the client.<br>
+    3. <strong>destroy():</strong> Called once when the server shuts down to clean up connections."</em>
+</div>
+
+<div class="viva-box">
+    <strong>Q3: What is the difference between <code>forward()</code> and <code>sendRedirect()</code>?</strong><br>
+    <strong>What to say:</strong><br>
+    <em>"RequestDispatcher.forward() is a <strong>server-side</strong> transfer. The URL in the browser does NOT change, request attributes are preserved, and only 1 network round-trip occurs. On the other hand, response.sendRedirect() is a <strong>client-side</strong> redirect. The server sends HTTP 302 to the browser, the browser makes a completely new request, the URL changes, and old request attributes are lost."</em>
+</div>
+
+<div class="viva-box">
+    <strong>Q4: What is the difference between a Statement and a PreparedStatement?</strong><br>
+    <strong>What to say:</strong><br>
+    <em>"Statement compiles the SQL query every single time it runs and concatenates raw text, which makes it vulnerable to SQL Injection attacks. PreparedStatement is pre-compiled by the database engine and uses question mark (?) placeholders. It is faster for repeated executions and provides 100% protection against SQL Injection."</em>
+</div>
+
+<div class="viva-box">
+    <strong>Q5: What is an ACID transaction? How is it implemented in your project?</strong><br>
+    <strong>What to say:</strong><br>
+    <em>"ACID stands for Atomicity, Consistency, Isolation, and Durability. In ShopSphere, we implement this in CheckoutService during checkout. We call <code>conn.setAutoCommit(false)</code> to begin the transaction. We check and lock stock with row-level locks, insert the order, insert items, record payment, and clear the cart. If all succeed, we call <code>conn.commit()</code>. If any step fails, we catch the exception and call <code>conn.rollback()</code> so no half-completed orders exist."</em>
+</div>
+
+<div class="viva-box">
+    <strong>Q6: Why did you not use scriptlets <code>&lt;% %&gt;</code> in your business JSPs?</strong><br>
+    <strong>What to say:</strong><br>
+    <em>"Sir, writing raw Java scriptlets inside JSPs violates the MVC architecture by mixing business logic with presentation markup. It makes code difficult to maintain, read, and test. In ShopSphere, all business logic is in Servlets and Services, and our JSPs use clean Expression Language (${...}) and JSTL tags."</em>
+</div>
+
+<div class="viva-box">
+    <strong>Q7: What are the 4 scopes of Expression Language (EL)?</strong><br>
+    <strong>What to say:</strong><br>
+    <em>"EL searches for attributes across four scopes in order from narrowest to widest: 1. pageScope, 2. requestScope, 3. sessionScope, and 4. applicationScope. If not found in any scope, it returns null without throwing a NullPointerException."</em>
+</div>
+
+<div class="viva-box">
+    <strong>Q8: What is a Servlet Filter? Where is it used in ShopSphere?</strong><br>
+    <strong>What to say:</strong><br>
+    <em>"A Filter is an interceptor that executes before requests reach a servlet or after responses leave it. We implemented a 4-tier filter chain: EncodingFilter for UTF-8 encoding, SecurityFilter for browser defense headers, AuthenticationFilter to guard customer pages like /cart and /checkout, and AdminFilter to enforce role-based access control on /admin routes."</em>
+</div>
+
+<div class="viva-box">
+    <strong>Q9: What is Session Fixation, and how did you prevent it?</strong><br>
+    <strong>What to say:</strong><br>
+    <em>"Session Fixation is an attack where an attacker tricks a victim into authenticating using a pre-existing session ID known to the attacker. In LoginServlet, immediately after verifying valid credentials, we call <code>request.changeSessionId()</code>. This generates a brand-new cryptographically secure session ID, completely neutralizing the attack."</em>
+</div>
+
+<div class="viva-box">
+    <strong>Q10: How does your password hashing work?</strong><br>
+    <strong>What to say:</strong><br>
+    <em>"We do not store passwords in plain text or simple MD5. We use salted PBKDF2 with HMAC-SHA256. It generates a 128-bit random salt and runs 65,536 iterations. The salt and hash are stored together in the database, making rainbow-table and dictionary attacks practically impossible."</em>
+</div>
+
+<div class="viva-box">
+    <strong>Q11: What is the Event Dispatch Thread (EDT) in Java Swing?</strong><br>
+    <strong>What to say:</strong><br>
+    <em>"Swing components are not thread-safe. All UI creation, painting, and user event handling must run on a single dedicated thread called the Event Dispatch Thread (EDT). If we run long database calls on the EDT, the window freezes. So we use <code>SwingWorker</code> to run DB operations on a background thread and update the UI when finished."</em>
+</div>
+
+<div class="viva-box">
+    <strong>Q12: What is the difference between TCP Sockets and Java RMI?</strong><br>
+    <strong>What to say:</strong><br>
+    <em>"TCP Sockets operate at the transport layer (byte stream). We have to design our own custom text protocol (like CHECK_STOCK:1) and manually parse strings. Java RMI operates at the application/object layer. It allows one JVM to invoke actual Java methods on an object in another JVM with typed parameters and return values, handling serialization automatically."</em>
+</div>
+
+<div class="viva-box">
+    <strong>Q13: What does the <code>transient</code> keyword do in Java?</strong><br>
+    <strong>What to say:</strong><br>
+    <em>"The transient keyword indicates that a variable should NOT be serialized when an object is converted into a byte stream. During deserialization, transient fields are reset to their default values (null or 0). In our project, we mark sensitive password fields transient to prevent them from leaking across network streams."</em>
+</div>
+
+<div class="viva-box">
+    <strong>Q14: What is JNDI and why is it used?</strong><br>
+    <strong>What to say:</strong><br>
+    <em>"Java Naming and Directory Interface is a directory lookup service. Instead of hardcoding database passwords inside Java code, Tomcat manages a connection pool in context.xml. Our code simply looks up the DataSource using <code>new InitialContext().lookup(\"java:comp/env/jdbc/shopsphereDS\")</code>. This decouples database configuration from application code."</em>
+</div>
+
+<div class="viva-box">
+    <strong>Q15: How did you implement Internationalization (i18n)?</strong><br>
+    <strong>What to say:</strong><br>
+    <em>"We created resource bundle properties files (messages_en.properties and messages_hi.properties). When the user clicks the Hindi language switcher, LanguageServlet sets the session locale to 'hi_IN'. In JSP, we use JSTL <code>fmt:setLocale</code> and <code>fmt:message</code> tags to render Hindi labels and format prices in Indian Rupees (₹) dynamically."</em>
+</div>
+
+<div class="page-break"></div>
+
+<!-- CHAPTER 7 -->
+<h1>Chapter 7: The 10-Minute Live Viva Demo Script</h1>
+
+<p>
+When the external examiner sits down and says: <em>"Okay, show me your project,"</em> follow this exact script. It takes 8 to 10 minutes and shows 100% syllabus mastery:
+</p>
+
+<div class="script-box">
+    <h4>Step 1: Open the Storefront Homepage</h4>
+    <p><strong>Action:</strong> Open browser &rarr; navigate to <code>http://localhost:8080/shopsphere/</code></p>
+    <p><strong>What to say to examiner:</strong><br>
+    <em>"Sir, this is the ShopSphere customer storefront running on Apache Tomcat 11 using Jakarta EE 10. The layout is fully responsive using Bootstrap 5. All products and categories shown here are fetched dynamically from our MySQL database using plain JDBC with zero ORM overhead."</em></p>
+</div>
+
+<div class="script-box">
+    <h4>Step 2: Demonstrate Search, Filter & Cookies</h4>
+    <p><strong>Action:</strong> Click on "Products" in the navbar or select "Laptops" category &rarr; drag price slider &rarr; click on a product.</p>
+    <p><strong>What to say to examiner:</strong><br>
+    <em>"Here is our faceted search engine managed by ProductServlet. When we filter by category and price range, it executes parameterized queries using PreparedStatement. When I click on a product to view details, ProductServlet writes the product ID to a client cookie named 'recent_products'. When we go back to the homepage, you can see this 'Recently Viewed' section populated directly from that cookie."</em></p>
+</div>
+
+<div class="script-box">
+    <h4>Step 3: Demonstrate Authentication & Security</h4>
+    <p><strong>Action:</strong> Click "Sign In" &rarr; click the demo button <strong>"Fill Customer Credentials"</strong> &rarr; click Sign In.</p>
+    <p><strong>What to say to examiner:</strong><br>
+    <em>"Here is our authentication system. We do not store raw passwords in the database; we use salted PBKDF2 with HMAC-SHA256 with 65,536 iterations. Notice that immediately upon login, LoginServlet executes <code>request.changeSessionId()</code>, which prevents Session Fixation attacks by rotating the session ID."</em></p>
+</div>
+
+<div class="script-box">
+    <h4>Step 4: Demonstrate Cart & Atomic Checkout</h4>
+    <p><strong>Action:</strong> Add a product to cart &rarr; go to <code>/cart</code> &rarr; change quantity &rarr; proceed to checkout &rarr; enter coupon code <code>WELCOME10</code> &rarr; click "Place Order".</p>
+    <p><strong>What to say to examiner:</strong><br>
+    <em>"All cart totals are calculated strictly server-side to prevent price tampering. During checkout, CheckoutService initiates an ACID transaction with <code>conn.setAutoCommit(false)</code>. It locks the product stock row using <code>SELECT ... FOR UPDATE</code>, deducts inventory, creates the order and item records, records payment, and empties the cart before calling <code>conn.commit()</code>. If inventory was insufficient, it would call <code>conn.rollback()</code>."</em></p>
+</div>
+
+<div class="script-box">
+    <h4>Step 5: Demonstrate the Web Admin Portal & Access Control</h4>
+    <p><strong>Action:</strong> Sign out &rarr; log in as <code>admin@shopsphere.com</code> / <code>Admin@123</code> &rarr; go to <code>/admin/dashboard</code>.</p>
+    <p><strong>What to say to examiner:</strong><br>
+    <em>"Here is the Web Administration Portal. It provides analytics, revenue totals, product CRUD, and order management. If a regular customer tries to access any /admin URL, our AdminFilter intercepts the request and throws an HTTP 403 Access Denied error."</em></p>
+</div>
+
+<div class="script-box">
+    <h4>Step 6: Demonstrate the Academic Syllabus Demo Hub</h4>
+    <p><strong>Action:</strong> Navigate to <code>http://localhost:8080/shopsphere/demo/</code></p>
+    <p><strong>What to say to examiner:</strong><br>
+    <em>"Sir, to demonstrate all RTU Advanced Java curriculum topics, we built this Syllabus Demo Hub:
+    <ul>
+        <li><strong>JSP Elements:</strong> Shows declarations, scriptlets, expressions, 9 implicit objects, and lifecycle counter.</li>
+        <li><strong>EL Demo:</strong> Proves 4-tier scope resolution.</li>
+        <li><strong>JSTL XML:</strong> Parses XML feeds with XPath.</li>
+        <li><strong>JSTL SQL:</strong> Demonstrates direct database queries via tags.</li>
+        <li><strong>JNDI:</strong> Looks up Tomcat's managed connection pool.</li>
+        <li><strong>Session Inspector:</strong> Shows live session ID, timestamps, and client cookies.</li>
+    </ul>"</em></p>
+</div>
+
+<div class="script-box">
+    <h4>Step 7: Demonstrate Internationalization (i18n Hindi)</h4>
+    <p><strong>Action:</strong> Click "Language" in the navbar &rarr; select <strong>"हिंदी (Hindi)"</strong>.</p>
+    <p><strong>What to say to examiner:</strong><br>
+    <em>"Here is our internationalization feature. Notice that all navigation labels, buttons, and headers immediately switch to Hindi backed by messages_hi.properties, fmt:setLocale, and fmt:message tags, while keeping Indian Rupee (₹) currency formatting intact."</em></p>
+</div>
+
+<div class="script-box">
+    <h4>Step 8: Demonstrate the Java Swing Desktop Admin App</h4>
+    <p><strong>Action:</strong> In command prompt, run: <code>java -jar swing-admin/target/shopsphere-swing-admin-1.0.0-jar-with-dependencies.jar</code> &rarr; log in &rarr; switch Look & Feel to "Nimbus".</p>
+    <p><strong>What to say to examiner:</strong><br>
+    <em>"This is our Java Swing Desktop Administration application. It follows strict MVC architecture with custom AbstractTableModels. All database calls execute on background threads via SwingWorker to keep the Event Dispatch Thread completely responsive. We also support runtime Pluggable Look and Feel (PLAF)—notice how the theme instantly changes between System, Nimbus, and Metal."</em></p>
+</div>
+
+<div class="script-box">
+    <h4>Step 9: Demonstrate TCP Sockets & Java RMI</h4>
+    <p><strong>Action:</strong> Show the terminal running <code>InventoryServer</code> and <code>InventoryClient</code>, and <code>RmiServer</code> and <code>RmiClient</code>.</p>
+    <p><strong>What to say to examiner:</strong><br>
+    <em>"Finally, here are our distributed networking modules. In shopsphere-network, InventoryServer listens on TCP port 5055 with a thread pool of 10 worker threads. In shopsphere-rmi, RmiServer creates an RMI Registry on port 1099, allowing remote clients to invoke inventory methods across different JVMs."</em></p>
+</div>
+
+<hr style="border: 0; border-top: 1px solid #cbd5e1; margin: 25pt 0;">
+
+<div style="text-align: center; color: #64748b; font-size: 10pt;">
+    <p><strong>ShopSphere — RTU 6CS4-04 Advanced Java Capstone Project</strong></p>
+    <p><em>All rights reserved. Best wishes for your Project Viva Examination!</em></p>
+</div>
+
+</body>
+</html>
